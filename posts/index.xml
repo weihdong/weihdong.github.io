@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 董 玮豪（Weih Dong）</title>
+    <link>https://weihdong.github.io/posts/</link>
+    <description>Recent content in Posts on 董 玮豪（Weih Dong）</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 09 Apr 2025 15:17:00 +0800</lastBuildDate>
+    <atom:link href="https://weihdong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>https://weihdong.github.io/posts/first/</link>
+      <pubDate>Wed, 09 Apr 2025 15:17:00 +0800</pubDate>
+      <guid>https://weihdong.github.io/posts/first/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
