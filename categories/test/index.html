@@ -84,10 +84,7 @@ html.dark #dream-global-bg {
     <div id="dream-global-bg"></div>
 
     
-<nav x-data="{ isSticky: false }"
-  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
-  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
-  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+<nav class="mt-4 lg:mt-8 py-4">
 
   
   <div class="container flex justify-between px-4">
@@ -292,6 +289,12 @@ html.dark #dream-global-bg {
 
       
       
+      <a href="/categories/category1/" class="badge h-6 no-underline hover:badge-primary">
+        Category1
+      </a>
+      
+      
+      
       <span class="badge h-6 badge-primary">
         Test
       </span>
@@ -319,7 +322,11 @@ html.dark #dream-global-bg {
   
   <figure>
     
-    <img src="/img/cover.jpg" alt="Imgtest" />
+    
+    <picture>
+      <source srcset="/images/default2_hu_c96b8a8cc3f55f81.webp" type="image/webp" />
+      <img src="/images/default2.jpg" alt="/images/default2.jpg" />
+    </picture>
     
   </figure>
   

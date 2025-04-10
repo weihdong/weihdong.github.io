@@ -113,10 +113,7 @@ html.dark #dream-global-bg {
     <div id="dream-global-bg"></div>
 
     
-<nav x-data="{ isSticky: false }"
-  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
-  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
-  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+<nav class="mt-4 lg:mt-8 py-4">
 
   
   <div class="container flex justify-between px-4">
@@ -590,13 +587,7 @@ html.dark #dream-global-bg {
         
 
         
-        <a role="button" class="btn btn-outline h-12" href="/posts/post-1/" title="">
-          <div class="inline-flex flex-col items-end">
-            <span class="text-base-content/60 text-xs font-normal">下一页</span>
-            <span class="max-w-48 truncate"></span>
-          </div>
-          <ion-icon name="chevron-forward"></ion-icon>
-        </a>
+        <div></div>
         
       </div>
       

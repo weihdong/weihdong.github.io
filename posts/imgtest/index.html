@@ -111,10 +111,7 @@ html.dark #dream-global-bg {
     <div id="dream-global-bg"></div>
 
     
-<nav x-data="{ isSticky: false }"
-  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
-  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
-  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+<nav class="mt-4 lg:mt-8 py-4">
 
   
   <div class="container flex justify-between px-4">
@@ -409,8 +406,6 @@ html.dark #dream-global-bg {
 
       <section id="dream-single-post-content" itemprop="articleBody">
         
-          <img class="w-full z-30" src="/img/cover.jpg" alt="Imgtest" />
-        
 
         <p>Cut out summary from your post content here.</p>
 <p>The remaining content of your post.</p>
@@ -424,7 +419,13 @@ html.dark #dream-global-bg {
       <div class="divider"></div>
       <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
         
-        <div></div>
+        <a role="button" class="btn btn-outline h-12" href="/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/" title="Hugo&#43;github博客">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">Hugo&#43;github博客</span>
+          </div>
+        </a>
         
 
         

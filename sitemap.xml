@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://weihdong.github.io/posts/</loc>
-    <lastmod>2025-04-10T19:55:41+08:00</lastmod>
+    <lastmod>2025-04-10T22:16:43+08:00</lastmod>
   </url><url>
     <loc>https://weihdong.github.io/categories/</loc>
-    <lastmod>2025-04-10T19:55:41+08:00</lastmod>
+    <lastmod>2025-04-10T22:16:43+08:00</lastmod>
+  </url><url>
+    <loc>https://weihdong.github.io/categories/category1/</loc>
+    <lastmod>2025-04-10T22:16:43+08:00</lastmod>
+  </url><url>
+    <loc>https://weihdong.github.io/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2025-04-10T22:16:43+08:00</lastmod>
+  </url><url>
+    <loc>https://weihdong.github.io/tags/tag1/</loc>
+    <lastmod>2025-04-10T22:16:43+08:00</lastmod>
+  </url><url>
+    <loc>https://weihdong.github.io/tags/tag2/</loc>
+    <lastmod>2025-04-10T22:16:43+08:00</lastmod>
+  </url><url>
+    <loc>https://weihdong.github.io/tags/</loc>
+    <lastmod>2025-04-10T22:16:43+08:00</lastmod>
+  </url><url>
+    <loc>https://weihdong.github.io/</loc>
+    <lastmod>2025-04-10T22:16:43+08:00</lastmod>
   </url><url>
     <loc>https://weihdong.github.io/tags/img/</loc>
     <lastmod>2025-04-10T19:55:41+08:00</lastmod>
@@ -17,13 +35,7 @@
     <loc>https://weihdong.github.io/tags/picture/</loc>
     <lastmod>2025-04-10T19:55:41+08:00</lastmod>
   </url><url>
-    <loc>https://weihdong.github.io/tags/</loc>
-    <lastmod>2025-04-10T19:55:41+08:00</lastmod>
-  </url><url>
     <loc>https://weihdong.github.io/categories/test/</loc>
-    <lastmod>2025-04-10T19:55:41+08:00</lastmod>
-  </url><url>
-    <loc>https://weihdong.github.io/</loc>
     <lastmod>2025-04-10T19:55:41+08:00</lastmod>
   </url><url>
     <loc>https://weihdong.github.io/tags/github/</loc>
@@ -43,8 +55,6 @@
   </url><url>
     <loc>https://weihdong.github.io/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/</loc>
     <lastmod>2025-04-10T18:12:53+08:00</lastmod>
-  </url><url>
-    <loc>https://weihdong.github.io/posts/post-1/</loc>
   </url><url>
     <loc>https://weihdong.github.io/search/</loc>
   </url>

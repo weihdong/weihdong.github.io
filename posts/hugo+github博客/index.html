@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="zh"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo&#43;github博客 | 董 玮豪（Weih Dong）</title>
+
+    
+
+<link rel="canonical" href="https://weihdong.github.io/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/" />
+
+
+
+<meta name="author" content="Weih Dong" />
+<meta name="description" content="Cut out summary from your post content here.
+" />
+
+
+<meta name="keywords" content="Tag1,Tag2">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="https://weihdong.github.io/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/">
+  <meta property="og:site_name" content="董 玮豪（Weih Dong）">
+  <meta property="og:title" content="Hugo&#43;github博客">
+  <meta property="og:description" content="Cut out summary from your post content here.">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-10T22:16:43+08:00">
+    <meta property="article:modified_time" content="2025-04-10T22:16:43+08:00">
+    <meta property="article:tag" content="Tag1">
+    <meta property="article:tag" content="Tag2">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hugo&#43;github博客">
+  <meta name="twitter:description" content="Cut out summary from your post content here.">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2QMX1FNJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KJ2QMX1FNJ');
+</script>
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+<style>
+
+#dream-global-bg {
+  background-image: url(/img/background1.jpeg);
+}
+
+
+
+html.dark #dream-global-bg {
+  background-image: url(/img/background2.webp);
+}
+
+</style>
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js" integrity="sha256-Lb/Sq1zF0ecN4bqy/bue64K+slKjVFtOh5PlcBS5VxY=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/img/head1.png" alt="Home" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://weihdong.github.io/" class="text-lg font-semibold cursor-pointer">
+          Home
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">You&#39;ll Never Walk Alone</div>
+        
+      </div>
+      
+    </section>
+
+    
+    
+      
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+
+
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Hugo&#43;github博客">
+  <meta itemprop="description" content="Cut out summary from your post content here.">
+  <meta itemprop="datePublished" content="2025-04-10T22:16:43+08:00">
+  <meta itemprop="dateModified" content="2025-04-10T22:16:43+08:00">
+  <meta itemprop="wordCount" content="1465">
+  <meta itemprop="keywords" content="Tag1,Tag2">
+
+      <header>
+        <h1 itemprop="headline">Hugo&#43;github博客</h1>
+        <p class="text-sm">
+          
+            星期四, 4月 10, 2025
+          
+
+          | <span>7分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期四, 4月 10, 2025
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0!" src="/img/author.jpg" alt="Weih Dong" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <a itemprop="url" href="https://github.com/weihdong" target="_blank">
+        <span itemprop="name">Weih Dong</span>
+      </a>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=Hugo&#43;github%e5%8d%9a%e5%ae%a2&amp;url=https://weihdong.github.io/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://weihdong.github.io/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=Hugo&#43;github%e5%8d%9a%e5%ae%a2%20https://weihdong.github.io/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="" target="_blank" rel="noopener noreferrer"
+      title="Share on ">
+      <ion-icon class="group-hover:text-primary-content" name="logo-QQ"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+
+        <p>Cut out summary from your post content here.</p>
+<p>The remaining content of your post.</p>
+<h1 id="一github配置">一、github配置</h1>
+<h2 id="1-新建仓库">1. 新建仓库</h2>
+<ol>
+<li>进入<a href="https://github.io" target="_blank">github</a>
+</li>
+<li>点击右上角加号New repository</li>
+<li>Repository name填写：你的用户名.github.io</li>
+<li>点击右下角Creat repository</li>
+</ol>
+<h2 id="2-添加个人访问令牌">2. 添加个人访问令牌</h2>
+<ol>
+<li>点击右上角头像</li>
+<li>点击Settings</li>
+<li>点击左边栏最下方Developer settings</li>
+<li>Personal access tokens</li>
+<li>tokens (classic)</li>
+<li>Generate new token</li>
+<li>Generate new token (classic)</li>
+<li>note（填写名字），Expiration（选无期限No expiration），勾选权限（repo, workflow）</li>
+<li>密码只会显示一次，复制保存好这个密码，待步骤4.1.3使用</li>
+</ol>
+<h1 id="二hugo配置">二、hugo配置</h1>
+<h2 id="0-说明">0 说明</h2>
+<p>速成只需第2～4步</p>
+<h2 id="1-删除站点">1 删除站点</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --  <span style="color:#75715e"># 退回到用户根目录</span>
+</span></span><span style="display:flex;"><span>rm -rf myblog
+</span></span></code></pre></div><h2 id="2-新建站点">2 新建站点</h2>
+<h3 id="21-新建站点">2.1 新建站点</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site myblog
+</span></span></code></pre></div><h3 id="22-下载主题">2.2 <a href="https://themes.gohugo.io" target="_blank">下载主题</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>cd themes
+</span></span><span style="display:flex;"><span>git clone https://github.com/g1eny0ung/hugo-theme-dream.git dream
+</span></span></code></pre></div><h3 id="23-修改模版文件">2.3 修改模版文件</h3>
+<h4 id="231-路径">2.3.1 路径</h4>
+<pre tabindex="0"><code class="language-路径" data-lang="路径">myblog/themes/dream/archetypes/posts.md
+</code></pre><h4 id="232-修改">2.3.2 修改</h4>
+<p><em>post.md</em> 文件 <em>(line 17)draft: true</em>，删除该行或修改为</p>
+<pre tabindex="0"><code class="language-post-md" data-lang="post-md">draft: false  # 关闭草稿模式
+</code></pre><h3 id="24-配置主题文件">2.4. 配置主题文件</h3>
+<h4 id="241-路径">2.4.1 路径</h4>
+<pre tabindex="0"><code class="language-example" data-lang="example">myblog/hugo.toml
+</code></pre><h4 id="242-修改">2.4.2 修改</h4>
+<p><em>hugo.toml</em> 文件修改为</p>
+<pre tabindex="0"><code class="language-hugo-toml" data-lang="hugo-toml"># 基础配置------------------------------------------------------------------------------
+baseurl = &#34;https://weihdong.github.io&#34;  # 网站根地址（必须与 GitHub Pages 地址一致）
+defaultContentLanguage = &#34;zh&#34;          # 默认内容语言
+languageCode = &#34;zh&#34;                    # 网站语言代码
+title = &#34;董 玮豪（Weih Dong）&#34;         # 网站标题（显示在浏览器标签）
+theme = &#34;dream&#34;                        # 使用 &#34;dream&#34; 主题(必须与根目录下”myblog/themes/文件名“的文件名相同)
+
+
+# 第三方服务-----------------------------------------------------------------------------
+[services]                          # 第三方服务配置区
+# [services.disqus]                   # Disqus 评论系统
+
+# shortname = &#34;https-weihdong-github-io&#34;                      # 需填写您的 Disqus shortname
+  [service.geogleAnalytics]           #Geogle分析
+    ID = &#34;G-Q0XX5ENN16&#34;                             # 需填写跟踪 ID
+    
+    
+# 主题参数配置----------------------------------------------------------------------------
+[params]
+
+# zenMode = true                      # 禅模式（极简阅读模式）
+lightTheme = &#34;emerald&#34;                # 白天主题配色方案
+darkTheme = &#34;forest&#34;                  # 暗黑模式配色方案
+
+# backgroundImage = &#34;img/global-background.jpg&#34;  # 全局背景图路径
+# backgroundImageDark = &#34;&#34;            # 暗黑模式背景图路径
+
+author = &#34;Weih Dong&#34;              # 作者名称
+# description = &#34;&#34;                    # 网站描述（SEO 用）
+avatar = &#34;img/head.png&#34;           # 头像图片路径
+headerTitle = &#34;Home&#34;              # 页眉显示的标题
+motto = &#34;hello world&#34;                          # 副标题/座右铭
+
+footerBottomText = &#34;网页信息均为公开&#34;               # 页脚附加文本
+
+collapseNavItems = [&#34;about&#34;, &#34;posts&#34;, &#34;categories&#34;, &#34;tags&#34;] # 折叠指定导航项
+stickyNav = true                    # 导航栏是否置顶固定
+showTableOfContents = true          # 显示文章目录
+reorderNavItems = [&#34;about&#34;, &#34;search&#34;, &#34;rss&#34;, &#34;posts&#34;, &#34;categories&#34;, &#34;tags&#34;] # 导航项排序
+
+# noDefaultSummaryCover = true        # 禁用默认摘要封面图
+
+showSummaryCoverInPost = true       # 在文章页显示摘要封面
+# imageZoomableInPost = true          # 允许图片点击放大
+showPrevNextPost = true             # 显示上一篇/下一篇导航
+reorderShares = [&#34;x&#34;, &#34;facebook&#34;, &#34;whatsapp&#34;, &#34;QQ&#34;] # 调整分享按钮顺序
+
+# rss = true                          # 是否启用 RSS 订阅
+
+# utterancesRepo = &#34;&#34;                 # GitHub 仓库名（用于 utterances 评论系统）
+
+# valine = true                       # 启用 Valine 评论系统
+# LEANCLOUD_APP_ID = &#34;a9VFD9uZVBdKHIm0jqkCaoB3-MdYXbMMI&#34;               # LeanCloud 应用 ID
+# LEANCLOUD_APP_KEY = &#34;KX5hSeA31xQdbGED4T92AwFA&#34;              # LeanCloud 应用 Key
+[params.valine]
+  enable = true  # 确保启用 Valine
+  appId = &#34;a9VFD9uZVBdKHIm0jqkCaoB3-MdYXbMMI&#34;  # 直接使用 appId
+  appKey = &#34;KX5hSeA31xQdbGED4T92AwFA&#34;          # 直接使用 appKey
+  serverURLs = &#34;https://a9vfd9uz.api.lncldglobal.com&#34;  # 国际版必须填写
+  placeholder = &#34;欢迎留言&#34;
+  avatar = &#34;retro&#34;
+  meta = [&#34;nick&#34;, &#34;mail&#34;, &#34;link&#34;]
+  
+
+# waline = true                       # 启用 Waline 评论系统
+# walineServer = &#34;&#34;                   # Waline 服务端地址
+
+# email = &#34;&#34;                          # 联系邮箱
+
+siteStartYear = 2025                  # 网站起始年份（用于页脚版权信息）
+
+# favicon = &#34;favicon.ico&#34;             # 网站图标路径
+
+# Syntax highlighting
+# customSyntaxHighlighting = true     # 自定义语法高亮
+
+#来必力配置
+# livere = true                         #启用来必力评论系统并填写你的ID
+# livereUID = &#34;MTAyMC82MDU0MS8zNzAxMQ==&#34;
+
+
+# 布局选项------------------------------------------------------------------------------
+
+
+
+
+# 高级配置------------------------------------------------------------------------------
+# [params.navItems]                   # 自定义导航项配置区
+
+# [params.twikoo]                     # Twikoo 评论系统配置
+# enabled = true                      # 启用 Twikoo
+# envID = &#34;&#34;                         # 环境 ID
+# region = &#34;&#34;                        # 腾讯云区域
+# lang = &#34;&#34;                          # 语言设置
+
+# [params.advanced]
+# customCSS = [&#34;css/custom.css&#34;]      # 自定义 CSS 文件路径
+# customJS = []                       # 自定义 JS 文件路径
+
+# [params.experimental]               # 实验性功能
+# jsDate = true                       # 使用 JS 渲染日期
+# jsDateFormat = &#34;yyyy年MM月dd日&#34;     # 日期显示格式
+
+
+# [params.advanced]
+# customCSS = [&#34;css/custom.css&#34;]
+</code></pre><h2 id="3-新建文章">3. 新建文章</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --  <span style="color:#75715e"># 退回用户根目录确保能进入myblog目录</span>
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>hugo new posts/first.md
+</span></span></code></pre></div><p>新建后对应目录下打开<em>first.md</em> 文档以编辑文章</p>
+<h2 id="4-部署远端">4. 部署远端</h2>
+<h3 id="41-初始化">4.1 初始化</h3>
+<h4 id="411-可略过新建忽视上传文件">4.1.1 (可略过)新建忽视上传文件</h4>
+<ol>
+<li>方法一</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;.DS_Store&#34;</span> &gt; .gitignore
+</span></span></code></pre></div><ol start="2">
+<li>方法二：或通过nano方式，注：ctrl+o保存，回车确认，ctrl+x退出编辑</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>touch .gitignore
+</span></span><span style="display:flex;"><span>nano .gitignore
+</span></span></code></pre></div><p>粘贴如下至 .gitignore</p>
+<pre tabindex="0"><code class="language--gitignore" data-lang="-gitignore">.DS_Store
+</code></pre><h4 id="412-建public文件">4.1.2 建public文件</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>hugo --theme<span style="color:#f92672">=</span>dream --baseURL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://weihdong.github.io/&#34;</span> --buildDrafts
+</span></span></code></pre></div><h4 id="413-初始化public文件">4.1.3 初始化public文件</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>cd public
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;first&#34;</span>
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/weihdong/weihdong.github.io.git
+</span></span><span style="display:flex;"><span>git push --set-upstream origin main  <span style="color:#75715e">#此时可能会报错‘不合法的用户名或密码&#39;，再输入一次即可，正确应输出Username for &#39;https://github.com&#39;:，输入你的用户名回车后粘贴个人访问令牌作为密码</span>
+</span></span></code></pre></div><h3 id="42-大功告成打开看看吧">4.2 大功告成，打开看看吧!</h3>
+<p>对于：https://你的用户名.github.io即你的博客页面
+对于：https://github.com/你的用户名/你的用户名.github.io即你的仓库，查看code和Actions查看上传状态</p>
+<h2 id="5-本地预览">5. 本地预览</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><h2 id="6-自动化推送">6. 自动化推送</h2>
+<h3 id="61-新建deploy">6.1 新建deploy</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>touch deploy
+</span></span><span style="display:flex;"><span>nano deploy
+</span></span></code></pre></div><h3 id="62-deploy代码">6.2 deploy代码</h3>
+<p>通过nano方式打开后粘贴如下代码</p>
+<pre tabindex="0"><code class="language-deploy" data-lang="deploy">#!/bin/bash
+set -e
+
+RED=&#39;\033[0;31m&#39;
+GREEN=&#39;\033[0;32m&#39;
+CYAN=&#39;\033[0;36m&#39;
+YELLOW=&#39;\033[1;33m&#39;
+NC=&#39;\033[0m&#39;
+
+# 自动生成提交信息函数
+generate_commit_msg() {
+    timestamp=$(date &#34;+%Y%m%d-%H%M%S&#34;)
+    random_hash=$(openssl rand -hex 3)
+    echo &#34;Auto-deploy: 
+$${timestamp}-$$
+{random_hash}&#34;
+}
+
+echo -e &#34;\n
+$${GREEN}🚀 启动部署流程...$$
+{NC}&#34;
+
+# 生成静态网站
+hugo -D || {
+    echo -e &#34;\n
+$${RED}❌ Hugo生成失败！$$
+{NC}&#34;
+    exit 1
+}
+
+cd public || exit 1
+
+# 智能提交信息处理
+if [ -z &#34;$1&#34; ]; then
+    commit_msg=$(generate_commit_msg)
+    echo -e &#34;
+$${YELLOW}ℹ️ 使用自动生成的提交编号：$$
+{commit_msg}${NC}&#34;
+else
+    commit_msg=&#34;$1&#34;
+fi
+
+# 检查是否有文件需要提交
+if [ -z &#34;$(git status --porcelain)&#34; ]; then
+    echo -e &#34;\n
+$${YELLOW}⚠️ 没有需要提交的变更，跳过提交步骤$$
+{NC}&#34;
+else
+    # 提交到GitHub
+    git add .
+    git commit -m &#34;${commit_msg}&#34;
+    git push origin main
+fi
+
+cd ..
+
+echo -e &#34;\n
+$${GREEN}🎉 成功更新！$$
+{CYAN}正在打开博客页面...${NC}&#34;
+sleep 2
+open &#34;https://weihdong.github.io&#34;
+echo -e &#34;\n
+$${CYAN}⚠️ 注意：变更可能需要1-2分钟完全生效$$
+{NC}&#34;
+</code></pre><h3 id="63-赋权">6.3 赋权</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x deploy
+</span></span></code></pre></div><h3 id="64-运行">6.4 运行</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>./deploy <span style="color:#e6db74">&#34;更新博客&#34;</span>  <span style="color:#75715e"># 或不带请求名称./deploy</span>
+</span></span></code></pre></div><h2 id="7-关于">7. 关于</h2>
+<ol>
+<li>新建me.md文档</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span><span style="display:flex;"><span>hugo new about/me.md
+</span></span></code></pre></div><ol start="2">
+<li>写入自我介绍</li>
+</ol>
+<pre tabindex="0"><code class="language-me-md" data-lang="me-md">---
+title: About Me
+---
+Hi, my name is Yue Yang. This is my blog.
+</code></pre><ol start="3">
+<li>在<em>myblog/content/about/</em> 下新建<em>index.md</em> 文档</li>
+</ol>
+<pre tabindex="0"><code class="language-index-md" data-lang="index-md">---
+headless: true
+---
+</code></pre><h2 id="8-评论">8. 评论</h2>
+<h3 id="80-说明">8.0 说明</h3>
+<p>评论系统有<a href="https://www.livere.com" target="_blank">来必力</a>
+、<a href="https://valine.js.org/en/quickstart.html" target="_blank">Valine</a>
+、<a href="https://disqus.com" target="_blank">Disqus</a>
+等，来必力可以qq、微博等国内软件登陆，不需要梯子🪜，加载速度慢，Valine仅姓名填写即可评论，便捷，不需要梯子🪜，加载速度快，Disqus需要梯子🪜，界面美观，仅支持x等国外社交平台登陆</p>
+<h3 id="81-来必力">8.1 来必力</h3>
+<ol>
+<li>覆盖<em>myblog/themes/dream/layouts/_ default/single.html</em></li>
+</ol>
+<pre tabindex="0"><code class="language-single-html" data-lang="single-html">{{ define &#34;title&#34; }}{{ .Title }}{{ end }}
+
+{{ define &#34;css&#34; }}
+
+{{ if site.Params.customSyntaxHighlighting }}
+&lt;link rel=&#34;stylesheet&#34; data-custom-syntax-highlighting /&gt;
+&lt;style&gt;
+  .chroma {
+    padding: 1em;
+    background-color: var(--dream-pre-bg, #f5f5f5);
+    border-radius: .5em;
+    overflow: auto;
+  }
+
+  html.dark .chroma {
+    background-color: var(--dream-pre-bg-dark, #262626);
+  }
+&lt;/style&gt;
+{{ else }}
+&lt;style&gt;
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+&lt;/style&gt;
+{{ end }}
+
+{{ partialCached &#34;commentSystemHeads.html&#34; . }}
+
+{{ end }}
+
+{{ define &#34;main&#34; }}
+&lt;div class=&#34;lg:grid lg:grid-cols-4 gap-4 mt-4 px-4&#34;&gt;
+  &lt;div class=&#34;hidden lg:block&#34;&gt;
+    {{ if fileExists &#34;layouts/partials/adsense.html&#34; }}
+      &lt;div class=&#34;dream-adsense w-2/3&#34;&gt;
+        {{ partialCached &#34;adsense.html&#34; . }}
+      &lt;/div&gt;
+    {{ end }}
+  &lt;/div&gt;
+
+  &lt;div class=&#34;lg:col-span-2&#34;&gt;
+    &lt;article class=&#34;mx-auto prose prose-quoteless dark:prose-invert&#34; id=&#34;dream-single-post-main&#34; itemscope itemtype=&#34;http://schema.org/Article&#34;&gt;
+      {{ template &#34;_internal/schema.html&#34; . }}
+
+      &lt;header&gt;
+        &lt;h1 itemprop=&#34;headline&#34;&gt;{{ .Title }}&lt;/h1&gt;
+        &lt;p class=&#34;text-sm&#34;&gt;
+          {{ if site.Params.Experimental.jsDate }}
+            &lt;span data-format=&#34;luxon&#34;&gt;{{ .Date.Format &#34;2006-01-02T15:04:05Z07:00&#34; }}&lt;/span&gt;
+          {{ else }}
+            {{ .Date | time.Format &#34;Monday, Jan 2, 2006&#34; }}
+          {{ end }}
+
+          | &lt;span&gt;{{ .ReadingTime }}{{ T &#34;minuteRead&#34; .ReadingTime }}&lt;/span&gt;
+
+          {{ if ne .Params.nolastmod true }}
+          | &lt;span&gt;{{ T &#34;updatedAt&#34; }}
+            {{ if site.Params.Experimental.jsDate }}
+              &lt;span data-format=&#34;luxon&#34;&gt;{{ .Lastmod.Format &#34;2006-01-02T15:04:05Z07:00&#34; }}&lt;/span&gt;
+            {{ else }}
+              {{ .Lastmod | time.Format &#34;Monday, Jan 2, 2006&#34; }}
+            {{ end }}&lt;/span&gt;
+          {{ end }}
+        &lt;/p&gt;
+
+        {{ $hasAuthor := or .Params.author site.Params.author }}
+        &lt;div class=&#34;flex justify-between&#34;&gt;
+          {{ if $hasAuthor }}
+            {{ partial &#34;author.html&#34; (dict &#34;Params&#34; .Params &#34;template&#34; &#34;single&#34;) }}
+          {{ end }}
+
+          {{ partial &#34;share.html&#34; . }}
+        &lt;/div&gt;
+      &lt;/header&gt;
+
+      &lt;section id=&#34;dream-single-post-content&#34; itemprop=&#34;articleBody&#34;&gt;
+        {{ if and .Params.Cover site.Params.showSummaryCoverInPost }}
+          &lt;img class=&#34;w-full z-30&#34; src=&#34;{{ .Params.Cover }}&#34; alt=&#34;{{ .Title }}&#34; /&gt;
+        {{ end }}
+
+        {{ .Content | emojify }}
+
+        {{ if fileExists &#34;layouts/partials/adsense-post-bottom.html&#34; }}
+          &lt;div class=&#34;dream-adsense-post-bottom&#34;&gt;
+            {{ partialCached &#34;adsense-post-bottom.html&#34; . }}
+          &lt;/div&gt;
+        {{ end }}
+      &lt;/section&gt;
+
+      {{ if site.Params.showPrevNextPost }}
+      &lt;div class=&#34;divider&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;flex flex-col md:flex-row justify-between gap-4 py-4&#34;&gt;
+        {{ with .NextInSection }}
+        &lt;a role=&#34;button&#34; class=&#34;btn btn-outline h-12&#34; href=&#34;{{ .RelPermalink }}&#34; title=&#34;{{ .Title }}&#34;&gt;
+          &lt;ion-icon name=&#34;chevron-back&#34;&gt;&lt;/ion-icon&gt;
+          &lt;div class=&#34;inline-flex flex-col items-start&#34;&gt;
+            &lt;span class=&#34;text-base-content/60 text-xs font-normal&#34;&gt;{{ T &#34;prevPage&#34; }}&lt;/span&gt;
+            &lt;span class=&#34;max-w-48 truncate&#34;&gt;{{ .LinkTitle }}&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        {{ else }}
+        &lt;div&gt;&lt;/div&gt;
+        {{ end }}
+
+        {{ with .PrevInSection }}
+        &lt;a role=&#34;button&#34; class=&#34;btn btn-outline h-12&#34; href=&#34;{{ .RelPermalink }}&#34; title=&#34;{{ .Title }}&#34;&gt;
+          &lt;div class=&#34;inline-flex flex-col items-end&#34;&gt;
+            &lt;span class=&#34;text-base-content/60 text-xs font-normal&#34;&gt;{{ T &#34;nextPage&#34; }}&lt;/span&gt;
+            &lt;span class=&#34;max-w-48 truncate&#34;&gt;{{ .LinkTitle }}&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;ion-icon name=&#34;chevron-forward&#34;&gt;&lt;/ion-icon&gt;
+        &lt;/a&gt;
+        {{ else }}
+        &lt;div&gt;&lt;/div&gt;
+        {{ end }}
+      &lt;/div&gt;
+      {{ end }}
+      
+      {{ if .Site.Params.livere }}
+      &lt;!-- 来必力City版安装代码 --&gt;
+      &lt;div id=&#34;lv-container&#34; data-id=&#34;city&#34; data-uid=&#34;MTAyMC82MDU0MS8zNzAxMQ==&#34;&gt;
+        &lt;script type=&#34;text/javascript&#34;&gt;
+         (function(d, s) {
+             var j, e = d.getElementsByTagName(s)[0];
+
+             if (typeof LivereTower === &#39;function&#39;) { return; }
+
+             j = d.createElement(s);
+             j.src = &#39;https://cdn-city.livere.com/js/embed.dist.js&#39;;
+             j.async = true;
+
+             e.parentNode.insertBefore(j, e);
+         })(document, &#39;script&#39;);
+        &lt;/script&gt;
+      &lt;noscript&gt; 为正常使用来必力评论功能请激活JavaScript&lt;/noscript&gt;
+      &lt;/div&gt;
+      &lt;!-- City版安装代码已完成 --&gt;
+      {{ end }}
+
+      {{ if or site.Config.Services.Disqus.Shortname site.Params.utterancesRepo site.Params.valine site.Params.waline site.Params.twikoo.enabled }}
+      &lt;div class=&#34;divider&#34;&gt;&lt;/div&gt;
+
+      &lt;section class=&#34;space-y-4&#34;&gt;
+        {{ partialCached &#34;commentSystems.html&#34; . .RelPermalink }}
+      &lt;/section&gt;
+      {{ end }}
+    &lt;/article&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&#34;hidden lg:flex lg:flex-col lg:items-end&#34;&gt;
+    {{ if site.Params.showTableOfContents }}
+      {{ .TableOfContents }}
+    {{ end }}
+  &lt;/div&gt;
+&lt;/div&gt;
+{{ end }}
+
+{{ define &#34;js&#34; }}
+
+{{ if site.Params.Experimental.jsDate }}
+{{ partial &#34;luxon.html&#34; . }}
+{{ end }}
+
+{{ if site.Params.customSyntaxHighlighting }}
+{{- $syntaxLightCSS := resources.Get &#34;css/syntax-light.css&#34; | minify -}}
+{{- $syntaxDarkCSS := resources.Get &#34;css/syntax-dark.css&#34; | minify -}}
+&lt;script&gt;
+  window.customSyntaxHighlighting = {
+    light: {{ $syntaxLightCSS.RelPermalink }},
+    dark: {{ $syntaxDarkCSS.RelPermalink }}
+  }
+
+  document.addEventListener(&#39;alpine:initialized&#39;, () =&gt; {
+    var isDark = Alpine.store(&#39;darkMode&#39;).isDark()
+    var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
+
+    document
+      .querySelector(&#39;link[data-custom-syntax-highlighting]&#39;)
+      .setAttribute(&#39;href&#39;, customSyntaxHighlightingUrl)
+  })
+&lt;/script&gt;
+{{ end }}
+
+{{ if site.Params.imageZoomableInPost }}
+  {{ if fileExists &#34;layouts/partials/medium-zoom.html&#34; }}
+    {{ partialCached &#34;medium-zoom.html&#34; . }}
+  {{ else }}
+    &lt;script type=&#34;module&#34;&gt;
+      import mediumZoom from &#39;https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm&#39;;
+      mediumZoom(&#39;#dream-single-post-content img&#39;, {
+        background: &#39;oklch(var(--b1))&#39;,
+        margin: 24,
+      })
+    &lt;/script&gt;
+  {{ end }}
+{{ end }}
+
+{{ end }}
+</code></pre><ol start="2">
+<li><a href="https://www.livere.com/login_form" target="_blank">注册来必力</a>
+</li>
+<li>修改<em>myblog/homo.toml(line 77)</em> 删除#启用代码</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#来必力配置</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># livere = true                         #启用来必力评论系统并填写你的ID</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># livereUID = &#34;MTAyMC82MDU0MS8zNzAxMQ==&#34;  #更换为自己的来必力id</span>
+</span></span></code></pre></div><h3 id="82-valine">8.2 Valine</h3>
+<ol>
+<li><a href="https://console.leancloud.cn/login" target="_blank">注册Valine</a>
+</li>
+<li>数据化仓库新建Class：Comment</li>
+<li><em>hugo.toml(line 55)</em> 启用并更换为你的id和key</li>
+</ol>
+<pre tabindex="0"><code class="language-hugo-toml" data-lang="hugo-toml">[params.valine]
+  enable = true  # 确保启用 Valine
+  appId = &#34;a9VFD9uZVBdKHIm0jqkCaoB3-MdYXbMMI&#34;  # 直接使用 appId
+  appKey = &#34;KX5hSeA31xQdbGED4T92AwFA&#34;          # 直接使用 appKey
+  serverURLs = &#34;https://a9vfd9uz.api.lncldglobal.com&#34;  # 国际版必须填写
+  placeholder = &#34;欢迎留言&#34;
+  avatar = &#34;retro&#34;
+  meta = [&#34;nick&#34;, &#34;mail&#34;, &#34;link&#34;]
+</code></pre><ol start="4">
+<li>新增valine文件至myblog/themes/dream/layouts/partials/valine.html</li>
+</ol>
+<pre tabindex="0"><code class="language-valine-html" data-lang="valine-html">&lt;div id=&#34;vcomments&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+  new Valine({
+    el: &#39;#vcomments&#39;,
+    appId: &#39;{{ .Site.Params.valine.appId }}&#39;,
+    appKey: &#39;{{ .Site.Params.valine.appKey }}&#39;,
+    serverURLs: &#39;{{ .Site.Params.valine.serverURLs }}&#39;, // 国际版必须填写
+  });
+&lt;/script&gt;
+</code></pre><ol start="5">
+<li><a href="https://valine.js.org/en/quickstart.html" target="_blank">详细说明</a>
+</li>
+</ol>
+<h2 id="9-搜索">9. 搜索</h2>
+<p>新建空文件<em>myblog/content/search/_index.md</em></p>
+<h2 id="10-主题图片">10. 主题图片</h2>
+<p>图片均放在路径<em>myblog/static/img/</em>
+作者头像在文件中启用<em>myblog/themes/dream/archetypes/posts.md</em>
+博客头像在文件中启用<em>myblog/hugo.toml(line 30)</em></p>
+<h2 id="11-网站分析">11. 网站分析</h2>
+<p>进入<a href="https://marketingplatform.google.com/about/analytics/" target="_blank">谷歌分析</a>
+ 并创建数据流，将手动生成代码粘贴至*myblog/themes/dream/layouts/paticial/head.html (line 46)，复制跟踪ID至hugo.toml (line15)</p>
+<h2 id="12-归档">12. 归档</h2>
+<ol>
+<li>新建文件</li>
+</ol>
+<pre tabindex="0"><code class="language-road" data-lang="road">myblog/content/posts/_index.md
+</code></pre><ol start="2">
+<li>粘贴</li>
+</ol>
+<pre tabindex="0"><code class="language-_index-md" data-lang="_index-md">---
+groupLayout: Jan 2006
+---
+</code></pre>
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <div></div>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/imgtest/" title="Imgtest">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">Imgtest</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+      <div class="divider"></div>
+
+      <section class="space-y-4">
+        
+
+
+
+
+<article>
+
+  <div id="vcomments"></div>
+<script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: 'fRhFPoN8xlM30RHn8tRpkc3Z-gzGzoHsz',
+    appKey: 'K6QsrC6qjGP07zCnWM9XndOh',
+    serverURLs: 'https:\/\/frhfpon8.lc-cn-n1-shared.com', 
+  });
+</script>
+
+
+</article>
+
+
+
+
+
+
+      </section>
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-新建仓库">1. 新建仓库</a></li>
+    <li><a href="#2-添加个人访问令牌">2. 添加个人访问令牌</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#0-说明">0 说明</a></li>
+    <li><a href="#1-删除站点">1 删除站点</a></li>
+    <li><a href="#2-新建站点">2 新建站点</a>
+      <ul>
+        <li><a href="#21-新建站点">2.1 新建站点</a></li>
+        <li><a href="#22-下载主题">2.2 <a href="https://themes.gohugo.io">下载主题</a></a></li>
+        <li><a href="#23-修改模版文件">2.3 修改模版文件</a></li>
+        <li><a href="#24-配置主题文件">2.4. 配置主题文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-新建文章">3. 新建文章</a></li>
+    <li><a href="#4-部署远端">4. 部署远端</a>
+      <ul>
+        <li><a href="#41-初始化">4.1 初始化</a></li>
+        <li><a href="#42-大功告成打开看看吧">4.2 大功告成，打开看看吧!</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-本地预览">5. 本地预览</a></li>
+    <li><a href="#6-自动化推送">6. 自动化推送</a>
+      <ul>
+        <li><a href="#61-新建deploy">6.1 新建deploy</a></li>
+        <li><a href="#62-deploy代码">6.2 deploy代码</a></li>
+        <li><a href="#63-赋权">6.3 赋权</a></li>
+        <li><a href="#64-运行">6.4 运行</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-关于">7. 关于</a></li>
+    <li><a href="#8-评论">8. 评论</a>
+      <ul>
+        <li><a href="#80-说明">8.0 说明</a></li>
+        <li><a href="#81-来必力">8.1 来必力</a></li>
+        <li><a href="#82-valine">8.2 Valine</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-搜索">9. 搜索</a></li>
+    <li><a href="#10-主题图片">10. 主题图片</a></li>
+    <li><a href="#11-网站分析">11. 网站分析</a></li>
+    <li><a href="#12-归档">12. 归档</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>© 2025 董 玮豪（Weih Dong）</p>
+  
+
+  
+  <p>The above content is all public</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">About Me</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Hi,
+thanks for your attention. If you have any
+question or need support, please contact me or
+leave a comment at the bottom of the article.</p>
+<p>Weihao Dong
+董 玮豪
+April 12, 2025 at 13:14 (UTC+8)
+Mob. +86 175-8558-2048 | E-mail: <a href="mailto:weihdong@hotmail.com" target="_blank">weihdong@hotmail.com</a>
+
+Room 2, 3/F, Unit2, Bldg32, No.398 South Changling Road, Guanshanhu District, Guiyang
+550081</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>© 2025 董 玮豪（Weih Dong）</p>
+  
+
+  
+  <p>The above content is all public</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>
