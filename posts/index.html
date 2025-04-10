@@ -87,7 +87,10 @@ html.dark #dream-global-bg {
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
@@ -305,7 +308,7 @@ html.dark #dream-global-bg {
           <ul>
             
             <li>
-              <a href="/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/">Hugo&#43;github博客</a>
+              <a href="/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/hugo&#43;github%E5%8D%9A%E5%AE%A2/">Hugo&#43;github博客</a>
             </li>
             
             <li>
@@ -313,7 +316,7 @@ html.dark #dream-global-bg {
             </li>
             
             <li>
-              <a href="/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/">域名更换</a>
+              <a href="/posts/%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/">域名更换</a>
             </li>
             
           </ul>

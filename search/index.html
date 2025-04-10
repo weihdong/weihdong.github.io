@@ -84,7 +84,10 @@ html.dark #dream-global-bg {
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
@@ -500,7 +503,7 @@ Room 2, 3/F, Unit2, Bldg32, No.398 South Changling Road, Guanshanhu District, Gu
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" integrity="sha256-42IbU8t3tOwwbexB7ZVRHm3YDRf65aBPPjRtIUufj5I=" crossorigin="anonymous"></script>
 <script>
-  var fuseData = [{"author":"Weih Dong","avatar":"/img/author.jpg","categories":["category1"],"description":"\u003cp\u003eCut out summary from your post content here.\u003c/p\u003e","readingTime":7,"tags":["tag1","tag2"],"title":"Hugo+github博客","url":"/posts/hugo+github%E5%8D%9A%E5%AE%A2/"},{"author":"Weih Dong","avatar":"/img/author.png","categories":["test"],"description":"\u003cp\u003eCut out summary from your post content here.\u003c/p\u003e","readingTime":1,"tags":["img","picture"],"title":"Imgtest","url":"/posts/imgtest/"},{"author":"Weih Dong","avatar":"/img/author.jpg","categories":["配置"],"description":"\u003cp\u003eCut out summary from your post content here.\u003c/p\u003e","readingTime":2,"tags":["域名","hugo","github","博客"],"title":"域名更换","url":"/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/"}];
+  var fuseData = [{"author":"Weih Dong","avatar":"/img/author.jpg","categories":["category1"],"description":"\u003cp\u003eCut out summary from your post content here.\u003c/p\u003e","readingTime":7,"tags":["tag1","tag2"],"title":"Hugo+github博客","url":"/posts/hugo+github%E5%8D%9A%E5%AE%A2/hugo+github%E5%8D%9A%E5%AE%A2/"},{"author":"Weih Dong","avatar":"/img/author.png","categories":["test"],"description":"\u003cp\u003eCut out summary from your post content here.\u003c/p\u003e","readingTime":1,"tags":["img","picture"],"title":"Imgtest","url":"/posts/imgtest/"},{"author":"Weih Dong","avatar":"/img/author.jpg","categories":["配置"],"description":"\u003cp\u003eCut out summary from your post content here.\u003c/p\u003e","readingTime":2,"tags":["域名","hugo","github","博客"],"title":"域名更换","url":"/posts/%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/"}];
   var fuseOptions = {
     keys: [
       "title",
