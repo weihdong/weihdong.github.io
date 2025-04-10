@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 董 玮豪（Weih Dong）</title>
+    <title>董 玮豪（Weih Dong）</title>
     <link>https://weihdong.github.io/posts/</link>
-    <description>Recent content in Posts on 董 玮豪（Weih Dong）</description>
+    <description>Recent content on 董 玮豪（Weih Dong）</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 10 Apr 2025 19:55:41 +0800</lastBuildDate>
@@ -21,6 +21,13 @@
       <pubDate>Thu, 10 Apr 2025 18:12:53 +0800</pubDate>
       <guid>https://weihdong.github.io/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://weihdong.github.io/posts/post-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://weihdong.github.io/posts/post-1/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
