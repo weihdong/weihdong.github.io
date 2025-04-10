@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>域名更换 | 董 玮豪（Weih Dong）</title>
+
+    
+
+<link rel="canonical" href="https://weihdong.github.io/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/" />
+
+
+
+<meta name="author" content="Author Name" />
+<meta name="description" content="Cut out summary from your post content here.
+" />
+
+
+<meta name="keywords" content="Tag1,Tag2">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="https://weihdong.github.io/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/">
+  <meta property="og:site_name" content="董 玮豪（Weih Dong）">
+  <meta property="og:title" content="域名更换">
+  <meta property="og:description" content="Cut out summary from your post content here.">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-10T18:12:53+08:00">
+    <meta property="article:modified_time" content="2025-04-10T18:12:53+08:00">
+    <meta property="article:tag" content="Tag1">
+    <meta property="article:tag" content="Tag2">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="域名更换">
+  <meta name="twitter:description" content="Cut out summary from your post content here.">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js" integrity="sha256-Lb/Sq1zF0ecN4bqy/bue64K+slKjVFtOh5PlcBS5VxY=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/img/head.png" alt="Home" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://weihdong.github.io/" class="text-lg font-semibold cursor-pointer">
+          Home
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">hello world</div>
+        
+      </div>
+      
+    </section>
+
+    
+    
+      
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+
+
+
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="域名更换">
+  <meta itemprop="description" content="Cut out summary from your post content here.">
+  <meta itemprop="datePublished" content="2025-04-10T18:12:53+08:00">
+  <meta itemprop="dateModified" content="2025-04-10T18:12:53+08:00">
+  <meta itemprop="wordCount" content="292">
+  <meta itemprop="keywords" content="Tag1,Tag2">
+
+      <header>
+        <h1 itemprop="headline">域名更换</h1>
+        <p class="text-sm">
+          
+            星期四, 4月 10, 2025
+          
+
+          | <span>2分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期四, 4月 10, 2025
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <span itemprop="name">Author Name</span>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=%e5%9f%9f%e5%90%8d%e6%9b%b4%e6%8d%a2&amp;url=https://weihdong.github.io/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://weihdong.github.io/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=%e5%9f%9f%e5%90%8d%e6%9b%b4%e6%8d%a2%20https://weihdong.github.io/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="" target="_blank" rel="noopener noreferrer"
+      title="Share on ">
+      <ion-icon class="group-hover:text-primary-content" name="logo-QQ"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="/img/cover.jpg" alt="域名更换" />
+        
+
+        <p>Cut out summary from your post content here.</p>
+<p>The remaining content of your post.</p>
+<h3 id="第一步获取-github-pages-的-ip-地址用于-a-记录">第一步：获取 GitHub Pages 的 IP 地址（用于 A 记录）</h3>
+<ol>
+<li><strong>打开浏览器</strong>，访问 GitHub 官方文档：<a href="https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain" target="_blank">GitHub Pages IP 地址列表</a>
+。</li>
+<li><strong>复制以下 4 个 IP 地址</strong>（直接从这里抄）：
+<pre tabindex="0"><code>185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+</code></pre></li>
+</ol>
+<hr>
+<h3 id="第二步cloudflare-域名解析设置">第二步：Cloudflare 域名解析设置</h3>
+<ol>
+<li><strong>登录 Cloudflare</strong>：访问 <a href="https://dash.cloudflare.com" target="_blank">https://dash.cloudflare.com</a>
+，选择你的域名。</li>
+<li><strong>进入 DNS 设置</strong>：点击左侧菜单 <strong>DNS &gt; Records</strong>。</li>
+<li><strong>删除旧记录</strong>（如果有）：删除指向 GitHub 的旧 A 记录或 CNAME 记录。</li>
+<li><strong>添加根域名解析（A 记录）</strong>：
+<ul>
+<li>点击 <strong>Add Record</strong>。</li>
+<li>类型选择 <strong>A</strong>。</li>
+<li>名称填写 <strong>@</strong>（表示根域名，如 <code>yourdomain.com</code>）。</li>
+<li>IPv4 地址填写刚才复制的 <strong>4 个 GitHub IP</strong>，分 4 次添加（每个 IP 单独一条 A 记录）：
+<ul>
+<li>第一条：<code>185.199.108.153</code></li>
+<li>第二条：<code>185.199.109.153</code></li>
+<li>第三条：<code>185.199.110.153</code></li>
+<li>第四条：<code>185.199.111.153</code></li>
+</ul>
+</li>
+<li>TTL 选择 <strong>Auto</strong>（保持默认）。</li>
+<li>代理状态（橙色云朵）<strong>关闭</strong>（点击云朵变成灰色，避免 Cloudflare 代理干扰初始设置）。
+<img src="https://i.imgur.com/3xHmCQp.png" alt="Cloudflare A 记录示例"></li>
+</ul>
+</li>
+<li><strong>添加 www 子域名解析（CNAME 记录）</strong>：
+<ul>
+<li>点击 <strong>Add Record</strong>。</li>
+<li>类型选择 <strong>CNAME</strong>。</li>
+<li>名称填写 <strong>www</strong>（表示 <code>www.yourdomain.com</code>）。</li>
+<li>目标填写 <strong>你的GitHub用户名.github.io</strong>（如 <code>yourgithubname.github.io</code>）。</li>
+<li>TTL 选择 <strong>Auto</strong>。</li>
+<li>代理状态同样<strong>关闭</strong>（灰色云朵）。
+<img src="https://i.imgur.com/1ZQ2e1L.png" alt="Cloudflare CNAME 记录示例"></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="第三步github-仓库设置">第三步：GitHub 仓库设置</h3>
+<ol>
+<li><strong>在本地 Hugo 项目中创建 CNAME 文件</strong>：
+<ul>
+<li>打开 Mac 的 <strong>终端</strong>（Terminal）。</li>
+<li>进入你的 Hugo 项目根目录：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/Documents/my-hugo-blog  <span style="color:#75715e"># 替换为你的实际路径</span>
+</span></span></code></pre></div></li>
+<li>生成 CNAME 文件：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;www.yourdomain.com&#34;</span> &gt; static/CNAME  <span style="color:#75715e"># 替换为你的域名</span>
+</span></span></code></pre></div></li>
+<li>检查是否成功：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat static/CNAME  <span style="color:#75715e"># 应该输出你的域名</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li><strong>重新生成并推送网站到 GitHub</strong>：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo -D           <span style="color:#75715e"># 生成静态文件到 public 文件夹</span>
+</span></span><span style="display:flex;"><span>cd public         <span style="color:#75715e"># 进入 public 目录</span>
+</span></span><span style="display:flex;"><span>git add .         <span style="color:#75715e"># 添加所有文件</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add CNAME file for custom domain&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main  <span style="color:#75715e"># 推送到 GitHub</span>
+</span></span></code></pre></div></li>
+<li><strong>在 GitHub 启用自定义域名</strong>：
+<ul>
+<li>打开浏览器，进入你的 GitHub 仓库。</li>
+<li>点击 <strong>Settings &gt; Pages</strong>。</li>
+<li>在 <strong>Custom domain</strong> 输入框填写 <code>www.yourdomain.com</code>，点击 <strong>Save</strong>。</li>
+<li>勾选 <strong>Enforce HTTPS</strong>（如果显示为灰色，等待几分钟刷新后再勾选）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="第四步cloudflare-启用-https-和代理">第四步：Cloudflare 启用 HTTPS 和代理</h3>
+<ol>
+<li><strong>返回 Cloudflare</strong>，进入 <strong>SSL/TLS &gt; Overview</strong>：
+<ul>
+<li>加密模式选择 <strong>Full (strict)</strong>。</li>
+</ul>
+</li>
+<li>**进入 <strong>SSL/TLS &gt; Edge Certificates</strong>：
+<ul>
+<li>开启 <strong>Always Use HTTPS</strong>（自动跳转 HTTPS）。</li>
+</ul>
+</li>
+<li><strong>重新打开 DNS 记录的代理</strong>：
+<ul>
+<li>回到 <strong>DNS &gt; Records</strong>，将 A 记录和 CNAME 记录的代理状态打开（点击灰色云朵变成橙色）。
+<img src="https://i.imgur.com/7JjWXlM.png" alt="Cloudflare 开启代理"></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="第五步验证是否成功">第五步：验证是否成功</h3>
+<ol>
+<li><strong>检查 DNS 是否生效</strong>：
+<ul>
+<li>在 Mac 终端运行：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig www.yourdomain.com +short  <span style="color:#75715e"># 应该返回 GitHub 的 IP</span>
+</span></span><span style="display:flex;"><span>dig yourdomain.com +short      <span style="color:#75715e"># 应该返回你设置的 4 个 IP</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li><strong>访问你的域名</strong>：
+<ul>
+<li>打开浏览器，访问 <code>http://yourdomain.com</code> 和 <code>http://www.yourdomain.com</code>，应该自动跳转到 HTTPS 并显示博客内容。</li>
+</ul>
+</li>
+<li><strong>等待 HTTPS 证书</strong>：
+<ul>
+<li>GitHub 会自动为你的域名签发 HTTPS 证书，最长需要 24 小时。如果暂时未生效，隔几小时再检查。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="故障排除">故障排除</h3>
+<ul>
+<li><strong>如果显示 GitHub 404 页面</strong>：
+<ul>
+<li>检查 GitHub 仓库的 <code>public</code> 分支是否有 <code>CNAME</code> 文件。</li>
+<li>在 GitHub 仓库的 Pages 设置中，重新输入域名并保存。</li>
+</ul>
+</li>
+<li><strong>如果 Cloudflare 报错</strong>：
+<ul>
+<li>暂时关闭代理（灰色云朵），直接访问 <code>http://yourdomain.com</code> 测试是否 GitHub 已配置成功。</li>
+</ul>
+</li>
+</ul>
+<p>完成以上步骤</p>
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <div></div>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/second/" title="Second">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">Second</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+      <div class="divider"></div>
+
+      <section class="space-y-4">
+        
+
+
+
+
+<article>
+
+  <div id="vcomments"></div>
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: '',
+      appKey: ''
+    })
+  </script>
+
+</article>
+
+
+
+
+
+
+      </section>
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#第一步获取-github-pages-的-ip-地址用于-a-记录">第一步：获取 GitHub Pages 的 IP 地址（用于 A 记录）</a></li>
+        <li><a href="#第二步cloudflare-域名解析设置">第二步：Cloudflare 域名解析设置</a></li>
+        <li><a href="#第三步github-仓库设置">第三步：GitHub 仓库设置</a></li>
+        <li><a href="#第四步cloudflare-启用-https-和代理">第四步：Cloudflare 启用 HTTPS 和代理</a></li>
+        <li><a href="#第五步验证是否成功">第五步：验证是否成功</a></li>
+        <li><a href="#故障排除">故障排除</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>© 2025 董 玮豪（Weih Dong）</p>
+  
+
+  
+  <p>网页信息均为公开</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>© 2025 董 玮豪（Weih Dong）</p>
+  
+
+  
+  <p>网页信息均为公开</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>
