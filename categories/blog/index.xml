@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on 董 玮豪（Weih Dong）</title>
+    <link>https://weihdong.github.io/categories/blog/</link>
+    <description>Recent content in Blog on 董 玮豪（Weih Dong）</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 10 Apr 2025 22:16:43 +0800</lastBuildDate>
+    <atom:link href="https://weihdong.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo&#43;github博客</title>
+      <link>https://weihdong.github.io/posts/hugo&#43;github/hugo&#43;github%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Thu, 10 Apr 2025 22:16:43 +0800</pubDate>
+      <guid>https://weihdong.github.io/posts/hugo&#43;github/hugo&#43;github%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;使用Hugo+GitHub单仓库单分支快速搭建静态博客&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
