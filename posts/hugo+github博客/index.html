@@ -405,7 +405,7 @@ html.dark #dream-global-bg {
 
       <section id="dream-single-post-content" itemprop="articleBody">
         
-          <img class="w-full z-30" src="/img/cover.png" alt="Hugo&#43;github博客" />
+          <img class="w-full z-30" src="/img/md/hugo2.png" alt="Hugo&#43;github博客" />
         
 
         <p>使用Hugo+GitHub单仓库单分支快速搭建静态博客</p>
@@ -1109,30 +1109,63 @@ groupLayout: Jan 2006
   
   <p>
     <span id="busuanzi_container_site_pv">
-      本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 •
+      总访问量 <span id="busuanzi_value_site_pv"></span> 次 |
       访客数 <span id="busuanzi_value_site_uv"></span> 人次
     </span>
   </p>
   
 
   
-    
-    
-    
-    
-    
-    
-    
-    
-  <p>
-    本站已运行
-    0 年
-    0 月
-    2 天
+  <p id="site-runtime"
+     data-start="2025-04-10T15:00:00"
+     style="margin:0.5rem 0;">
+    <span>本站已运行 </span>
+    <span id="runtime-display">加载中...</span>
   </p>
   
 
   
+
+  <script>
+  (function() {
+    
+    function calculateRuntime(startTime) {
+      const now = new Date();
+      const diff = now - startTime;
+      
+      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+      const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+      const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      return { years, months, days, hours, minutes, seconds };
+    }
+
+    
+    function updateRuntimeDisplay() {
+      const runtimeElement = document.getElementById('site-runtime');
+      if (!runtimeElement) return;
+
+      const startTimestamp = new Date(runtimeElement.dataset.start).getTime();
+      const { years, months, days, hours, minutes, seconds } = calculateRuntime(startTimestamp);
+      
+      document.getElementById('runtime-display').innerHTML = `
+        ${years} 年 
+        ${months} 月 
+        ${days} 天 
+        ${hours} 时 
+        ${minutes} 分 
+        ${seconds} 秒
+      `;
+    }
+
+    
+    updateRuntimeDisplay();
+    setInterval(updateRuntimeDisplay, 1000);
+  })();
+  </script>
 </div>
 
   <div
@@ -1216,30 +1249,63 @@ Room 2, 3/F, Unit2, Bldg32, No.398 South Changling Road, Guanshanhu District, Gu
   
   <p>
     <span id="busuanzi_container_site_pv">
-      本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 •
+      总访问量 <span id="busuanzi_value_site_pv"></span> 次 |
       访客数 <span id="busuanzi_value_site_uv"></span> 人次
     </span>
   </p>
   
 
   
-    
-    
-    
-    
-    
-    
-    
-    
-  <p>
-    本站已运行
-    0 年
-    0 月
-    2 天
+  <p id="site-runtime"
+     data-start="2025-04-10T15:00:00"
+     style="margin:0.5rem 0;">
+    <span>本站已运行 </span>
+    <span id="runtime-display">加载中...</span>
   </p>
   
 
   
+
+  <script>
+  (function() {
+    
+    function calculateRuntime(startTime) {
+      const now = new Date();
+      const diff = now - startTime;
+      
+      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+      const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+      const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      return { years, months, days, hours, minutes, seconds };
+    }
+
+    
+    function updateRuntimeDisplay() {
+      const runtimeElement = document.getElementById('site-runtime');
+      if (!runtimeElement) return;
+
+      const startTimestamp = new Date(runtimeElement.dataset.start).getTime();
+      const { years, months, days, hours, minutes, seconds } = calculateRuntime(startTimestamp);
+      
+      document.getElementById('runtime-display').innerHTML = `
+        ${years} 年 
+        ${months} 月 
+        ${days} 天 
+        ${hours} 时 
+        ${minutes} 分 
+        ${seconds} 秒
+      `;
+    }
+
+    
+    updateRuntimeDisplay();
+    setInterval(updateRuntimeDisplay, 1000);
+  })();
+  </script>
 </div>
 
   <div
