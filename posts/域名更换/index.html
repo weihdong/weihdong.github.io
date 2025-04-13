@@ -15,11 +15,11 @@
 
 
 <meta name="author" content="Weih Dong" />
-<meta name="description" content="Cut out summary from your post content here.
+<meta name="description" content="域名注册、解析及分配
 " />
 
 
-<meta name="keywords" content="域名,Hugo,Github,博客">
+<meta name="keywords" content="域名,Hugo,Github,博客,CloudFlare">
 
 
 
@@ -29,7 +29,7 @@
 <meta property="og:url" content="https://weihdong.github.io/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/">
   <meta property="og:site_name" content="董 玮豪（Weih Dong）">
   <meta property="og:title" content="域名更换">
-  <meta property="og:description" content="Cut out summary from your post content here.">
+  <meta property="og:description" content="域名注册、解析及分配">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -39,24 +39,15 @@
     <meta property="article:tag" content="Hugo">
     <meta property="article:tag" content="Github">
     <meta property="article:tag" content="博客">
+    <meta property="article:tag" content="CloudFlare">
 
 
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="域名更换">
-  <meta name="twitter:description" content="Cut out summary from your post content here.">
+  <meta name="twitter:description" content="域名注册、解析及分配">
 
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2QMX1FNJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KJ2QMX1FNJ');
-</script>
 
 
 
@@ -113,7 +104,10 @@ html.dark #dream-global-bg {
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
@@ -313,31 +307,39 @@ html.dark #dream-global-bg {
 
   <div class="lg:col-span-2">
     <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
-      
+          
   <meta itemprop="name" content="域名更换">
-  <meta itemprop="description" content="Cut out summary from your post content here.">
+  <meta itemprop="description" content="域名注册、解析及分配">
   <meta itemprop="datePublished" content="2025-04-10T18:12:53+08:00">
   <meta itemprop="dateModified" content="2025-04-10T18:12:53+08:00">
-  <meta itemprop="wordCount" content="300">
-  <meta itemprop="keywords" content="域名,Hugo,Github,博客">
+  <meta itemprop="wordCount" content="293">
+  <meta itemprop="keywords" content="域名,Hugo,Github,博客,CloudFlare">
 
-      <header>
-        <h1 itemprop="headline">域名更换</h1>
-        <p class="text-sm">
-          
-            星期四, 4月 10, 2025
-          
+          <header>
+            <h1 itemprop="headline">域名更换</h1>
+            <p class="text-sm">
+              
+                星期四, 4月 10, 2025
+              
 
-          | <span>2分钟阅读</span>
+              | <span>2分钟阅读</span>
 
-          
-          | <span>更新于
+              
+              | <span>更新于
+                
+                  星期四, 4月 10, 2025
+                </span>
+              
+              
+                
+              | <span>
+                  <span id="busuanzi_container_page_pv">
+                    阅读量 <span id="busuanzi_value_page_pv"></span>
+                  </span>
+                </span>
+              
+            </p>
             
-              星期四, 4月 10, 2025
-            </span>
-          
-        </p>
-
         
         <div class="flex justify-between">
           
@@ -345,7 +347,7 @@ html.dark #dream-global-bg {
   
   <div class="avatar mr-1">
     <div class="w-8 rounded-full">
-      <img class="my-0!" src="/img/author.jpg" alt="Weih Dong" />
+      <img class="my-0!" src="/img/author.png" alt="Weih Dong" />
     </div>
   </div>
   
@@ -392,12 +394,6 @@ html.dark #dream-global-bg {
       <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
     </a>
   
-    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="" target="_blank" rel="noopener noreferrer"
-      title="Share on ">
-      <ion-icon class="group-hover:text-primary-content" name="logo-QQ"></ion-icon>
-    </a>
-  
 
   
   
@@ -408,10 +404,10 @@ html.dark #dream-global-bg {
 
       <section id="dream-single-post-content" itemprop="articleBody">
         
-          <img class="w-full z-30" src="/img/cover.jpg" alt="域名更换" />
+          <img class="w-full z-30" src="/img/cover.png" alt="域名更换" />
         
 
-        <p>Cut out summary from your post content here.</p>
+        <p>域名注册、解析及分配</p>
 <p>The remaining content of your post.</p>
 <h3 id="第一步获取-github-pages-的-ip-地址用于-a-记录">第一步：获取 GitHub Pages 的 IP 地址（用于 A 记录）</h3>
 <ol>
@@ -654,13 +650,35 @@ html.dark #dream-global-bg {
             
 <footer class="flex justify-between items-center gap-2 px-4 py-12">
 
-  <div>
   
-  <p>© 2025 董 玮豪（Weih Dong）</p>
+
+<div>
+  
+  <p>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 •
+      访客数 <span id="busuanzi_value_site_uv"></span> 人次
+    </span>
+  </p>
   
 
   
-  <p>The above content is all public</p>
+    
+    
+    
+    
+    
+    
+    
+    
+  <p>
+    本站已运行
+    0 年
+    0 月
+    2 天
+  </p>
+  
+
   
 </div>
 
@@ -739,13 +757,35 @@ Room 2, 3/F, Unit2, Bldg32, No.398 South Changling Road, Guanshanhu District, Gu
             
 <footer class="flex justify-between items-center gap-2 px-4 py-12">
 
-  <div>
   
-  <p>© 2025 董 玮豪（Weih Dong）</p>
+
+<div>
+  
+  <p>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 •
+      访客数 <span id="busuanzi_value_site_uv"></span> 人次
+    </span>
+  </p>
   
 
   
-  <p>The above content is all public</p>
+    
+    
+    
+    
+    
+    
+    
+    
+  <p>
+    本站已运行
+    0 年
+    0 月
+    2 天
+  </p>
+  
+
   
 </div>
 
@@ -831,5 +871,8 @@ Room 2, 3/F, Unit2, Bldg32, No.398 South Changling Road, Guanshanhu District, Gu
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
-  </body>
+    
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</body>
 </html>

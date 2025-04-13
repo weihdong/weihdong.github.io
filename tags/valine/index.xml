@@ -10,9 +10,9 @@
     <atom:link href="https://weihdong.github.io/tags/valine/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo&#43;github博客</title>
-      <link>https://weihdong.github.io/posts/hugo&#43;github/hugo&#43;github%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://weihdong.github.io/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Thu, 10 Apr 2025 22:16:43 +0800</pubDate>
-      <guid>https://weihdong.github.io/posts/hugo&#43;github/hugo&#43;github%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://weihdong.github.io/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;p&gt;使用Hugo+GitHub单仓库单分支快速搭建静态博客&lt;/p&gt;</description>
     </item>
   </channel>

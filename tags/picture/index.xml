@@ -10,10 +10,10 @@
     <atom:link href="https://weihdong.github.io/tags/picture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Imgtest</title>
-      <link>https://weihdong.github.io/posts/imgtest/imgtest/</link>
+      <link>https://weihdong.github.io/posts/imgtest/</link>
       <pubDate>Thu, 10 Apr 2025 19:55:41 +0800</pubDate>
-      <guid>https://weihdong.github.io/posts/imgtest/imgtest/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <guid>https://weihdong.github.io/posts/imgtest/</guid>
+      <description>&lt;p&gt;这是一个图片加载测试&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
