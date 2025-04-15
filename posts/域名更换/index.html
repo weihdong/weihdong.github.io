@@ -604,10 +604,47 @@ html.dark #dream-global-bg {
 <script>
   new Valine({
     el: '#vcomments',
-    appId: 'fRhFPoN8xlM30RHn8tRpkc3Z-gzGzoHsz',   
-    appKey: 'K6QsrC6qjGP07zCnWM9XndOh', 
-    serverURLs: 'https:\/\/frhfpon8.lc-cn-n1-shared.com', 
-    avatar: 'monsterid'  
+   appId: 'fRhFPoN8xlM30RHn8tRpkc3Z-gzGzoHsz',
+    appKey: 'K6QsrC6qjGP07zCnWM9XndOh',
+    serverURLs: 'https:\/\/frhfpon8.lc-cn-n1-shared.com',
+    avatar: 'monsterid',
+    meta: ['nick', 'mail'],  
+
+    
+    
+    avatarId: 'comment-nick',
+    avatar: 'mail',  
+    templates: {
+      message: function(h, vm) { 
+        return [
+          '<div class="comment-main">',
+          '<span class="comment-author">',
+            '<strong>', h('a', {
+              attrs: {
+                class: 'user-nickname',
+                href: '#'
+              }
+            }, vm.author), '</strong> ',  
+            '<span class="user-mail">',  
+              '<a href="mailto:' + vm.mail + '" style="color: #888">',
+                '(' + vm.mail + ')',
+              '</a>',
+            '</span>',
+          '</span>',
+          '<div class="comment-metadata">',
+            h('span', { class: 'date' }, h('time', {
+              attrs: {
+                datetime: vm.createTS
+              }
+            }, vm.time)),
+          '</div>',
+          '<div class="comment-body">',
+            h('div', { class: 'comment-content' },
+              h('div', {dangerouslySetInnerHTML: {__html: vm.contentHTML}})),
+          '</div>',
+        ].join('');
+      }
+    }
   });
 </script>
 
