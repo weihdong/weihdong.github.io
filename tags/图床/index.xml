@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图床 on 董 玮豪（Weih Dong）</title>
+    <link>https://weihdong.github.io/tags/%E5%9B%BE%E5%BA%8A/</link>
+    <description>Recent content in 图床 on 董 玮豪（Weih Dong）</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 15 Apr 2025 23:09:14 +0800</lastBuildDate>
+    <atom:link href="https://weihdong.github.io/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudflare图床</title>
+      <link>https://weihdong.github.io/posts/cloudflare%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Tue, 15 Apr 2025 23:09:14 +0800</pubDate>
+      <guid>https://weihdong.github.io/posts/cloudflare%E5%9B%BE%E5%BA%8A/</guid>
+      <description>&lt;p&gt;cloudflare搭建无需梯子的免费10GB图床&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

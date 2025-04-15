@@ -6,20 +6,20 @@
     <description>Recent content in Tags on 董 玮豪（Weih Dong）</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 11 Apr 2025 23:25:27 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Apr 2025 23:09:14 +0800</lastBuildDate>
     <atom:link href="https://weihdong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tag1</title>
-      <link>https://weihdong.github.io/tags/tag1/</link>
-      <pubDate>Fri, 11 Apr 2025 23:25:27 +0800</pubDate>
-      <guid>https://weihdong.github.io/tags/tag1/</guid>
+      <title>CloudFlare</title>
+      <link>https://weihdong.github.io/tags/cloudflare/</link>
+      <pubDate>Tue, 15 Apr 2025 23:09:14 +0800</pubDate>
+      <guid>https://weihdong.github.io/tags/cloudflare/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tag2</title>
-      <link>https://weihdong.github.io/tags/tag2/</link>
-      <pubDate>Fri, 11 Apr 2025 23:25:27 +0800</pubDate>
-      <guid>https://weihdong.github.io/tags/tag2/</guid>
+      <title>图床</title>
+      <link>https://weihdong.github.io/tags/%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Tue, 15 Apr 2025 23:09:14 +0800</pubDate>
+      <guid>https://weihdong.github.io/tags/%E5%9B%BE%E5%BA%8A/</guid>
       <description></description>
     </item>
     <item>
@@ -83,13 +83,6 @@
       <link>https://weihdong.github.io/tags/picture/</link>
       <pubDate>Thu, 10 Apr 2025 19:55:41 +0800</pubDate>
       <guid>https://weihdong.github.io/tags/picture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CloudFlare</title>
-      <link>https://weihdong.github.io/tags/cloudflare/</link>
-      <pubDate>Thu, 10 Apr 2025 18:12:53 +0800</pubDate>
-      <guid>https://weihdong.github.io/tags/cloudflare/</guid>
       <description></description>
     </item>
   </channel>

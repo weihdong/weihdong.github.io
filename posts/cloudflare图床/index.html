@@ -6,35 +6,44 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>搜索 | 董 玮豪（Weih Dong）</title>
+    <title>Cloudflare图床 | 董 玮豪（Weih Dong）</title>
 
     
 
-<link rel="canonical" href="https://weihdong.github.io/search/" />
+<link rel="canonical" href="https://weihdong.github.io/posts/cloudflare%E5%9B%BE%E5%BA%8A/" />
 
 
 
-<meta name="author" content="Weih Dong" />
-<meta name="description" content="blog of dwh" />
+<meta name="author" content="Author Name" />
+<meta name="description" content="cloudflare搭建无需梯子的免费10GB图床
+" />
+
+
+<meta name="keywords" content="CloudFlare,图床">
 
 
 
 <meta name="generator" content="Hugo 0.145.0">
 
 
-<meta property="og:url" content="https://weihdong.github.io/search/">
+<meta property="og:url" content="https://weihdong.github.io/posts/cloudflare%E5%9B%BE%E5%BA%8A/">
   <meta property="og:site_name" content="董 玮豪（Weih Dong）">
-  <meta property="og:title" content="董 玮豪（Weih Dong）">
-  <meta property="og:description" content="blog of dwh">
+  <meta property="og:title" content="Cloudflare图床">
+  <meta property="og:description" content="cloudflare搭建无需梯子的免费10GB图床">
   <meta property="og:locale" content="zh">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-15T23:09:14+08:00">
+    <meta property="article:modified_time" content="2025-04-15T23:09:14+08:00">
+    <meta property="article:tag" content="CloudFlare">
+    <meta property="article:tag" content="图床">
 
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="董 玮豪（Weih Dong）">
-  <meta name="twitter:description" content="blog of dwh">
+  <meta name="twitter:title" content="Cloudflare图床">
+  <meta name="twitter:description" content="cloudflare搭建无需梯子的免费10GB图床">
 
 
 
@@ -60,7 +69,25 @@ html.dark #dream-global-bg {
 
 
 
-     
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js" integrity="sha256-Lb/Sq1zF0ecN4bqy/bue64K+slKjVFtOh5PlcBS5VxY=" crossorigin="anonymous"></script>
+
+
+
+
+
+
 
     
 
@@ -270,60 +297,209 @@ html.dark #dream-global-bg {
         <div class="front">
           <div class="container">
             
-
-
-<div class="mt-8 lg:mt-12 px-4"
-
-x-data="{
-  search: '',
-  get posts() { return this.search !== '' ? window.fuse.search(this.search) : [] },
-}">
-  <label for="search" class="input w-full">
-    <input id="search" name="search" type="text" class="grow" placeholder="搜索" x-model.debounce="search" />
-    <ion-icon name="search"></ion-icon>
-  </label>
-
-  <div class="mt-8 space-y-4">
-  <template x-for="post in posts">
-    <a class="card bg-base-100 hover:bg-base-content/10 cursor-pointer border border-base-content/30" :href="post.item.url">
-      <div class="card-body">
-        <h2 class="card-title" x-text="post.item.title"></h2>
-
-        <div x-html="post.item.description"></div>
-
-        <div class="card-actions justify-between items-center mt-4">
-          <div class="flex items-center">
-            <template x-if="post.item.avatar">
-            <div class="avatar mr-1">
-              <div class="w-8 rounded-full">
-                <img class="my-0" :src="post.item.avatar" :alt="post.item.author" />
-              </div>
-            </div>
-            </template>
-            <template x-if="!post.item.avatar">
-            <span>@</span>
-            </template>
-
-            <template x-if="post.item.author">
-            <span x-text="post.item.author"></span>
-            </template>
-            <template x-if="!post.item.author">
-            <span>Weih Dong</span>
-            </template>
-            </span>
-          </div>
-
-          <div class="inline-flex items-center">
-            <ion-icon name="time" class="mr-1"></ion-icon>
-            <span><span x-text="post.item.readingTime"></span>分钟阅读</span>
-          </div>
-        </div>
-      </div>
-    </a>
-  </template>
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
   </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Cloudflare图床">
+  <meta itemprop="description" content="cloudflare搭建无需梯子的免费10GB图床">
+  <meta itemprop="datePublished" content="2025-04-15T23:09:14+08:00">
+  <meta itemprop="dateModified" content="2025-04-15T23:09:14+08:00">
+  <meta itemprop="wordCount" content="19">
+  <meta itemprop="keywords" content="CloudFlare,图床">
+
+      <header>
+        <h1 itemprop="headline">Cloudflare图床</h1>
+        <p class="text-sm">
+          
+            星期二, 4月 15, 2025
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期二, 4月 15, 2025
+            </span>
+          
+          
+            
+          | <span>
+              <span id="busuanzi_container_page_pv">
+                阅读量 <span id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0!" src="/img/author.png" alt="Author Name" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <a itemprop="url" href="https://github.com/weihdong" target="_blank">
+        <span itemprop="name">Author Name</span>
+      </a>
+    
+  
+  </span>
 </div>
 
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=Cloudflare%e5%9b%be%e5%ba%8a&amp;url=https://weihdong.github.io/posts/cloudflare%E5%9B%BE%E5%BA%8A/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://weihdong.github.io/posts/cloudflare%E5%9B%BE%E5%BA%8A/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=Cloudflare%e5%9b%be%e5%ba%8a%20https://weihdong.github.io/posts/cloudflare%E5%9B%BE%E5%BA%8A/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="/img/cover.png" alt="Cloudflare图床" />
+        
+
+        <p>cloudflare搭建无需梯子的免费10GB图床</p>
+<h2 id="1-进入cloudflare">1. 进入<a href="https://dash.cloudflare.com" target="_blank">cloudflare</a>
+</h2>
+<h2 id="2-r2对象存储-创建存储桶">2. R2对象存储-创建存储桶</h2>
+<h2 id="3-连接域">3. 连接域</h2>
+<p>输入域名，域名前加一个别名即二级域名，如：img.085410.xyz</p>
+<h2 id="4-r2dev子域允许访问">4. R2.dev子域允许访问</h2>
+<h2 id="5-创建api令牌">5. 创建API令牌</h2>
+<p><img src="https://img.085410.xyz/2025/04/097af943816503d5896f4cf2fda0e09c.png" alt=""></p>
+<p><img src="https://img.085410.xyz/2025/04/ccbe83eb9dfe42d45f994b2f87dd8e30.png" alt="">
+权限选择读和写</p>
+<h2 id="6-复制两个密钥">6. 复制两个密钥</h2>
+<p><img src="https://img.085410.xyz/2025/04/0f52227baa33db8b5d9528ff4b6d4fbd.png" alt=""></p>
+<h2 id="7-打开picgo安装插件">7. 打开picgo，安装插件</h2>
+<p><img src="https://img.085410.xyz/2025/04/fb59d25527ac6c8e41075003d0f388f1.png" alt=""></p>
+<h2 id="8-配置插件">8. 配置插件</h2>
+<p><img src="https://img.085410.xyz/2025/04/b3c268e7bad15b85e10aeb1ebc8ab8f2.png" alt=""></p>
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <div></div>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/hugo&#43;github%E5%8D%9A%E5%AE%A2/" title="Hugo&#43;github博客">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">Hugo&#43;github博客</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+      <div class="divider"></div>
+
+      <section class="space-y-4">
+        
+
+
+
+
+<article>
+
+  <div id="vcomments"></div>
+<script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: 'fRhFPoN8xlM30RHn8tRpkc3Z-gzGzoHsz',   
+    appKey: 'K6QsrC6qjGP07zCnWM9XndOh', 
+    serverURLs: 'https:\/\/frhfpon8.lc-cn-n1-shared.com', 
+    avatar: 'monsterid'  
+  });
+</script>
+
+
+</article>
+
+
+
+
+
+
+      </section>
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-进入cloudflare">1. 进入<a href="https://dash.cloudflare.com">cloudflare</a></a></li>
+    <li><a href="#2-r2对象存储-创建存储桶">2. R2对象存储-创建存储桶</a></li>
+    <li><a href="#3-连接域">3. 连接域</a></li>
+    <li><a href="#4-r2dev子域允许访问">4. R2.dev子域允许访问</a></li>
+    <li><a href="#5-创建api令牌">5. 创建API令牌</a></li>
+    <li><a href="#6-复制两个密钥">6. 复制两个密钥</a></li>
+    <li><a href="#7-打开picgo安装插件">7. 打开picgo，安装插件</a></li>
+    <li><a href="#8-配置插件">8. 配置插件</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
 
 
             
@@ -598,22 +774,11 @@ Room 2, 3/F, Unit2, Bldg32, No.398 South Changling Road, Guanshanhu District, Gu
 
 
 
+  
+
+<script src="/js/toc.min.js"></script>
 
 
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" integrity="sha256-42IbU8t3tOwwbexB7ZVRHm3YDRf65aBPPjRtIUufj5I=" crossorigin="anonymous"></script>
-<script>
-  var fuseData = [{"author":"Author Name","avatar":"/img/author.png","categories":["blog"],"description":"\u003cp\u003ecloudflare搭建无需梯子的免费10GB图床\u003c/p\u003e","readingTime":1,"tags":["cloudflare","图床"],"title":"Cloudflare图床","url":"/posts/cloudflare%E5%9B%BE%E5%BA%8A/"},{"author":"Weih Dong","avatar":"/img/author.png","categories":["blog"],"description":"\u003cp\u003e使用Hugo+GitHub单仓库单分支快速搭建静态博客\u003c/p\u003e","readingTime":7,"tags":["blog","hugo","博客","github","域名","来必力","valine"],"title":"Hugo+github博客","url":"/posts/hugo+github%E5%8D%9A%E5%AE%A2/"},{"author":"Weih Dong","avatar":"/img/author.png","categories":["test"],"description":"\u003cp\u003e这是一个图片加载测试\u003c/p\u003e","readingTime":1,"tags":["img","picture"],"title":"Imgtest","url":"/posts/imgtest/"},{"author":"Weih Dong","avatar":"/img/author.png","categories":["配置"],"description":"\u003cp\u003e域名注册、解析及分配\u003c/p\u003e","readingTime":2,"tags":["域名","hugo","github","博客","CloudFlare"],"title":"域名更换","url":"/posts/%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2/"}];
-  var fuseOptions = {
-    keys: [
-      "title",
-    ]
-  };
-
-  var fuse = new Fuse(fuseData, fuseOptions);
-</script>
 
 
 
