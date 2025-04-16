@@ -1,0 +1,48 @@
+/***** 决定性修复Waline快速反馈下半部分被遮挡 *****/
+
+/* 确保快速反馈容器不受任何高度限制 */
+.wl-reaction {
+  position: relative !important;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  z-index: 9999 !important; /* 确保在前台显示 */
+}
+
+.wl-reaction-list {
+  position: static !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+}
+
+/* 强制移除可能存在的遮挡层 */
+.wl-reaction::after,
+.wl-reaction-list::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* 确保按钮高度足够容纳42px图片 */
+.wl-reaction-item {
+  height: 42px !important;
+  line-height: 42px !important;
+  min-height: 42px !important;
+  padding: 0 15px !important;
+}
+
+/* 移除对图片的可能过滤 */
+.wl-reaction-item img {
+  max-height: none !important;
+  height: 42px !important;
+  width: 42px !important;
+  object-fit: cover !important;
+  vertical-align: middle !important;
+}
+
+/* 父元素优先级强制提升 */
+body > * {
+  overflow: visible !important;
+}

@@ -52,6 +52,7 @@
 
 <link rel="stylesheet" href="/css/output.min.css" />
 
+<link rel="stylesheet" href="https://weihdong.github.io/css/waline-fix.css" />
 
 <style>
 
@@ -405,7 +406,7 @@ html.dark #dream-global-bg {
         <p>这是一个图片加载测试</p>
 <p>The remaining content of your post.</p>
 <h1 id="图片测试">图片测试</h1>
-<p>这是一张图片<img src="https://img01.085410.xyz/%E6%88%AA%E5%B1%8F2025-04-10%2010.23.41.png" alt=""></p>
+<p>这是一张图片<img src="https://img.085410.xyz/2025/04/8001987364c169fbd76d649cba6a35e4.png" alt=""></p>
 
         
       </section>
@@ -450,7 +451,7 @@ html.dark #dream-global-bg {
 
   <div id="waline"></div>
   <script type="module">
-    import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3/dist/waline.js';
+    import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3.5.6/dist/waline.js';
     
     init({
       el: '#waline',
@@ -459,18 +460,23 @@ html.dark #dream-global-bg {
       meta: ['nick','mail'],
       lang: 'zh-CN',                   
       emoji: [
-            'https://unpkg.com/@waline/emojis@1.2.0/qq',
-            'https://unpkg.com/@waline/emojis@1.2.0/bilibili'
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1/qq',
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1/bilibili',
+              
             
           ],           
       
       
+      reaction: [
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1/tieba/tieba_agree.png',
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1/tieba/tieba_look_down.png',
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1/weibo/weibo_desire.png',
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1/tieba/tieba_sunglasses.png',
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1/tieba/tieba_awkward.png',
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1/tieba/tieba_sleep.png'
+          ],
       
-            
-            
-          
-      
-      
+      avatar: 'monsterid',                     
       requiredMeta: ['nick', 'mail']  
       
     });
