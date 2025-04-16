@@ -19,7 +19,7 @@
 " />
 
 
-<meta name="keywords" content="Blog,Hugo,博客,Github,域名,来必力,Valine">
+<meta name="keywords" content="Blog,Hugo,博客,Github,域名,来必力,Valine,Waline,评论区,网页分析,部署">
 
 
 
@@ -85,9 +85,9 @@ html.dark #dream-global-bg {
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js" integrity="sha256-Lb/Sq1zF0ecN4bqy/bue64K+slKjVFtOh5PlcBS5VxY=" crossorigin="anonymous"></script>
 
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@3.5.6/dist/waline.css" integrity="sha256-qpAQ3GIja9xsaYW3Pa0+znYfCkBqUY3KAmc2l9MNZ3w=" crossorigin="anonymous" />
 
 
 
@@ -313,8 +313,8 @@ html.dark #dream-global-bg {
   <meta itemprop="description" content="使用Hugo&#43;GitHub单仓库单分支快速搭建静态博客">
   <meta itemprop="datePublished" content="2025-04-10T22:16:43+08:00">
   <meta itemprop="dateModified" content="2025-04-10T22:16:43+08:00">
-  <meta itemprop="wordCount" content="1457">
-  <meta itemprop="keywords" content="Blog,Hugo,博客,Github,域名,来必力,Valine">
+  <meta itemprop="wordCount" content="1579">
+  <meta itemprop="keywords" content="Blog,Hugo,博客,Github,域名,来必力,Valine,Waline,评论区,网页分析,部署">
 
       <header>
         <h1 itemprop="headline">Hugo&#43;github博客</h1>
@@ -323,7 +323,7 @@ html.dark #dream-global-bg {
             星期四, 4月 10, 2025
           
 
-          | <span>7分钟阅读</span>
+          | <span>8分钟阅读</span>
 
           
           | <span>更新于
@@ -432,7 +432,8 @@ html.dark #dream-global-bg {
 </ol>
 <h1 id="二hugo配置">二、hugo配置</h1>
 <h2 id="0-说明">0 说明</h2>
-<p>速成只需第2～4步</p>
+<p>速成只需第2～4步，以<a href="https://hugo-theme-dream.g1en.site" target="_blank">dream主题</a>
+ 为例</p>
 <h2 id="1-删除站点">1 删除站点</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd --  <span style="color:#75715e"># 退回到用户根目录</span>
 </span></span><span style="display:flex;"><span>rm -rf myblog
@@ -707,7 +708,8 @@ headless: true
 <p>评论系统有<a href="https://www.livere.com" target="_blank">来必力</a>
 、<a href="https://valine.js.org/en/quickstart.html" target="_blank">Valine</a>
 、<a href="https://disqus.com" target="_blank">Disqus</a>
-等，来必力可以qq、微博等国内软件登陆，不需要梯子🪜，加载速度慢，Valine仅姓名填写即可评论，便捷，不需要梯子🪜，加载速度快，Disqus需要梯子🪜，界面美观，仅支持x等国外社交平台登陆</p>
+、<a href="https://waline.js.org" target="_blank">Waline</a>
+等，来必力可以qq、微博等国内软件登陆，不需要梯子🪜，加载速度慢，Valine仅姓名填写即可评论，便捷，不需要梯子🪜，加载速度快，目前已停更，Waline为最新继承版本，Disqus需要梯子🪜，界面美观，仅支持x等国外社交平台登陆</p>
 <h3 id="81-来必力">8.1 来必力</h3>
 <ol>
 <li>覆盖<em>myblog/themes/dream/layouts/_ default/single.html</em></li>
@@ -951,7 +953,68 @@ headless: true
 <li><a href="https://valine.js.org/en/quickstart.html" target="_blank">详细说明</a>
 </li>
 </ol>
-<h2 id="9-搜索">9. 搜索</h2>
+<h3 id="83-waline">8.3 Waline</h3>
+<ol start="0">
+<li>详情可参考<a href="https://waline.js.org/guide/features/style.html" target="_blank">官方文档</a>
+</li>
+<li>进入<a href="https://console.leancloud.app/apps" target="_blank">LeanCloud国际版</a>
+</li>
+<li>创建应用</li>
+<li>设置-应用凭证-保存AppID、AppKey、MasterKey</li>
+<li>进入<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwalinejs%2Fwaline%2Ftree%2Fmain%2Fexample" target="_blank">vercel</a>
+</li>
+<li>登录并选择Github个人账户作为Git scope/仓库名自起，如waline</li>
+<li>点击顶部栏设置Settings-Environment Variables分别新建3个值
+<img src="https://img.085410.xyz/2025/04/b3f77648b439199478e1074f120baadf.png" alt=""></li>
+<li>点击Domains绑定[[域名]]，使用二级域名
+<img src="https://img.085410.xyz/2025/04/a6a4418af9f1c9db487e3268f8af2999.png" alt=""></li>
+<li>顶部栏Deployments点击最新的一次部署右侧的Redeploy重新部署</li>
+<li>访问你的域名，如https://waline.085410.xyz
+<img src="https://img.085410.xyz/2025/04/a7d70da316aaf7d5510ce06262537e54.png" alt=""></li>
+<li>注册登录
+<img src="https://img.085410.xyz/2025/04/0877737da37bf91ca2b36409c3ea188c.png" alt=""></li>
+<li>hugo.toml配置</li>
+</ol>
+<pre tabindex="0"><code class="language-hugo-html" data-lang="hugo-html">waline = true                       # 启用 Waline 评论系统
+walineServer = &#34;https://waline.085410.xyz&#34;                   # Waline 服务端地址
+</code></pre><ol start="12">
+<li><em>myblog/themes/dream/layouts/partials/commentSystems.html</em> 配置</li>
+</ol>
+<pre tabindex="0"><code class="language-commentSystems-html" data-lang="commentSystems-html">{{ if site.Params.waline }}
+**&lt;article&gt;**
+{{ if fileExists &#34;layouts/partials/waline.html&#34; }}
+  {{ partialCached &#34;waline.html&#34; . }}
+{{ else }}
+  **&lt;div** id**=**&#34;waline&#34;**&gt;&lt;/div&gt;**
+  **&lt;script** type**=**&#34;module&#34;**&gt;**
+    **import** { init } **from** &#39;https://cdn.jsdelivr.net/npm/@waline/client@3/dist/waline.js&#39;;
+    init({
+      el: &#39;#waline&#39;,
+      dark: &#39;html.dark&#39;,
+      serverURL: &#39;{{ site.Params.walineServer }}&#39;,
+      meta: [&#39;nick&#39;,&#39;mail&#39;],
+      lang: &#39;zh-CN&#39;,                   // 语言
+      emoji: [
+            &#39;https://unpkg.com/@waline/emojis@1.2.0/qq&#39;,
+            &#39;https://unpkg.com/@waline/emojis@1.2.0/bilibili&#39;
+            //&#39;https://unpkg.com/@waline/emojis@1.3.0/tieba&#39;
+          ],           // 表情
+      //login: &#39;enable&#39;,                  // 登录方式:所有（包括匿名）,disable:禁用登陆,force:必须登录
+      //reaction: true,                   // 快速反馈
+      //reaction: [
+            //&#39;https://unpkg.com/@waline/emojis@1.3.0/tieba/tieba_agree.png&#39;,
+            //&#39;https://unpkg.com/@waline/emojis@1.3.0/tieba/tieba_look_down.png&#39;
+          //],
+      //pageview: true,                   // 浏览量统计
+      //avatar: &#39;monsterid&#39;,                     // 默认头像
+      requiredMeta: [&#39;nick&#39;, &#39;mail&#39;]  // 必填字段
+      // 更多配置见官方文档: https://waline.js.org/reference/client/props.html
+    });
+  **&lt;/script&gt;**
+{{ end }}
+**&lt;/article&gt;**
+{{ end }}
+</code></pre><h2 id="9-搜索">9. 搜索</h2>
 <p>新建空文件<em>myblog/content/search/_index.md</em></p>
 <h2 id="10-主题图片">10. 主题图片</h2>
 <p>图片均放在路径<em>myblog/static/img/</em>
@@ -971,7 +1034,7 @@ headless: true
 <pre tabindex="0"><code class="language-_index-md" data-lang="_index-md">---
 groupLayout: Jan 2006
 ---
-</code></pre><h2 id="13-域名">13. 域名</h2>
+</code></pre><h2 id="13-域名">13. [[域名]]</h2>
 <ol>
 <li>购买域名：<a href="https://www.spaceship.com/zh/" target="_blank">spaceship</a>
 、<a href="https://wanwang.aliyun.com/domain/?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.1f1f2f3dh9DCTX&amp;scm=20140722.S_card@@%e4%ba%a7%e5%93%81@@3417315._.ID_card@@%e4%ba%a7%e5%93%81@@3417315-RL_%e5%9f%9f%e5%90%8d-LOC_2024SPSearchCard-OR_ser-PAR1_213e36c817442952787163563e67d4-V_4-RE_new6-P0_0-P1_0" target="_blank">阿里云</a>
@@ -1016,61 +1079,39 @@ groupLayout: Jan 2006
 
 
 
+
+
 <article>
 
-  <div id="vcomments"></div>
-<script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
-<script>
-  new Valine({
-    el: '#vcomments',
-   appId: 'fRhFPoN8xlM30RHn8tRpkc3Z-gzGzoHsz',
-    appKey: 'K6QsrC6qjGP07zCnWM9XndOh',
-    serverURLs: 'https:\/\/frhfpon8.lc-cn-n1-shared.com',
-    avatar: 'monsterid',
-    meta: ['nick', 'mail'],  
-
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3/dist/waline.js';
     
-    
-    avatarId: 'comment-nick',
-    avatar: 'mail',  
-    templates: {
-      message: function(h, vm) { 
-        return [
-          '<div class="comment-main">',
-          '<span class="comment-author">',
-            '<strong>', h('a', {
-              attrs: {
-                class: 'user-nickname',
-                href: '#'
-              }
-            }, vm.author), '</strong> ',  
-            '<span class="user-mail">',  
-              '<a href="mailto:' + vm.mail + '" style="color: #888">',
-                '(' + vm.mail + ')',
-              '</a>',
-            '</span>',
-          '</span>',
-          '<div class="comment-metadata">',
-            h('span', { class: 'date' }, h('time', {
-              attrs: {
-                datetime: vm.createTS
-              }
-            }, vm.time)),
-          '</div>',
-          '<div class="comment-body">',
-            h('div', { class: 'comment-content' },
-              h('div', {dangerouslySetInnerHTML: {__html: vm.contentHTML}})),
-          '</div>',
-        ].join('');
-      }
-    }
-  });
-</script>
-
+    init({
+      el: '#waline',
+      dark: 'html.dark',
+      serverURL: 'https:\/\/waline.085410.xyz',
+      meta: ['nick','mail'],
+      lang: 'zh-CN',                   
+      emoji: [
+            'https://unpkg.com/@waline/emojis@1.2.0/qq',
+            'https://unpkg.com/@waline/emojis@1.2.0/bilibili'
+            
+          ],           
+      
+      
+      
+            
+            
+          
+      
+      
+      requiredMeta: ['nick', 'mail']  
+      
+    });
+  </script>
 
 </article>
-
-
 
 
 
@@ -1124,13 +1165,14 @@ groupLayout: Jan 2006
         <li><a href="#80-说明">8.0 说明</a></li>
         <li><a href="#81-来必力">8.1 来必力</a></li>
         <li><a href="#82-valine">8.2 Valine</a></li>
+        <li><a href="#83-waline">8.3 Waline</a></li>
       </ul>
     </li>
     <li><a href="#9-搜索">9. 搜索</a></li>
     <li><a href="#10-主题图片">10. 主题图片</a></li>
     <li><a href="#11-网站分析">11. 网站分析</a></li>
     <li><a href="#12-归档">12. 归档</a></li>
-    <li><a href="#13-域名">13. 域名</a></li>
+    <li><a href="#13-域名">13. [[域名]]</a></li>
   </ul>
 </nav>
     

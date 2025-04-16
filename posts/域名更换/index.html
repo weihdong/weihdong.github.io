@@ -84,9 +84,9 @@ html.dark #dream-global-bg {
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js" integrity="sha256-Lb/Sq1zF0ecN4bqy/bue64K+slKjVFtOh5PlcBS5VxY=" crossorigin="anonymous"></script>
 
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@3.5.6/dist/waline.css" integrity="sha256-qpAQ3GIja9xsaYW3Pa0+znYfCkBqUY3KAmc2l9MNZ3w=" crossorigin="anonymous" />
 
 
 
@@ -597,61 +597,39 @@ html.dark #dream-global-bg {
 
 
 
+
+
 <article>
 
-  <div id="vcomments"></div>
-<script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
-<script>
-  new Valine({
-    el: '#vcomments',
-   appId: 'fRhFPoN8xlM30RHn8tRpkc3Z-gzGzoHsz',
-    appKey: 'K6QsrC6qjGP07zCnWM9XndOh',
-    serverURLs: 'https:\/\/frhfpon8.lc-cn-n1-shared.com',
-    avatar: 'monsterid',
-    meta: ['nick', 'mail'],  
-
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3/dist/waline.js';
     
-    
-    avatarId: 'comment-nick',
-    avatar: 'mail',  
-    templates: {
-      message: function(h, vm) { 
-        return [
-          '<div class="comment-main">',
-          '<span class="comment-author">',
-            '<strong>', h('a', {
-              attrs: {
-                class: 'user-nickname',
-                href: '#'
-              }
-            }, vm.author), '</strong> ',  
-            '<span class="user-mail">',  
-              '<a href="mailto:' + vm.mail + '" style="color: #888">',
-                '(' + vm.mail + ')',
-              '</a>',
-            '</span>',
-          '</span>',
-          '<div class="comment-metadata">',
-            h('span', { class: 'date' }, h('time', {
-              attrs: {
-                datetime: vm.createTS
-              }
-            }, vm.time)),
-          '</div>',
-          '<div class="comment-body">',
-            h('div', { class: 'comment-content' },
-              h('div', {dangerouslySetInnerHTML: {__html: vm.contentHTML}})),
-          '</div>',
-        ].join('');
-      }
-    }
-  });
-</script>
-
+    init({
+      el: '#waline',
+      dark: 'html.dark',
+      serverURL: 'https:\/\/waline.085410.xyz',
+      meta: ['nick','mail'],
+      lang: 'zh-CN',                   
+      emoji: [
+            'https://unpkg.com/@waline/emojis@1.2.0/qq',
+            'https://unpkg.com/@waline/emojis@1.2.0/bilibili'
+            
+          ],           
+      
+      
+      
+            
+            
+          
+      
+      
+      requiredMeta: ['nick', 'mail']  
+      
+    });
+  </script>
 
 </article>
-
-
 
 
 
