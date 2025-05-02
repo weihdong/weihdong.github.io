@@ -5,12 +5,7 @@
   :data-theme="$store.darkMode.theme()">
   <head>
     <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="x5-page-mode" content="app">
-    
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网页分析 | 董 玮豪（Weih Dong）</title>
 
     
@@ -66,32 +61,6 @@ html.dark #dream-global-bg {
 
 
 
-    
-    <style>
-       
-      ion-icon {
-        --icon-size: clamp(24px, 5vw, 32px);  
-        width: var(--icon-size) !important;
-        height: var(--icon-size) !important;
-        min-width: 22px !important;
-        min-height: 22px !important;
-      }
-
-       
-      @media (-webkit-tbs-zoom: fixed) {
-        ion-icon {
-          --icon-size: 28px !important;
-        }
-      }
-
-       
-      @media (max-width: 480px) {
-        ion-icon {
-          --icon-size: clamp(22px, 6.5vw, 28px) !important;
-        }
-      }
-    </style>
-
      
 
     
@@ -99,17 +68,9 @@ html.dark #dream-global-bg {
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
   </head>
 
-  <body x-data="{ flip: false }">
-    
-    <script>
-      
-      if(/MQQBrowser|TBS\//i.test(navigator.userAgent)) {
-        document.querySelectorAll('ion-icon').forEach(icon => {
-          icon.style.setProperty('--icon-size', '28px', 'important');
-        });
-      }
-    </script>
-
+  <body x-data="{
+    flip: false,
+  }">
     
     <div id="dream-global-bg"></div>
 
@@ -305,7 +266,6 @@ html.dark #dream-global-bg {
 </nav>
 
 
-    
     <div class="flip-container" :class="{ 'flip-it': flip }">
       <div class="flipper">
         <div class="front">
@@ -485,6 +445,7 @@ html.dark #dream-global-bg {
 </div>
 
 
+
             
 <footer class="flex justify-between items-center gap-2 px-4 py-12">
 
@@ -624,6 +585,7 @@ Room 2, 3/F, Unit2, Bldg32, No.398 South Changling Road, Guanshanhu District, Gu
 </div>
 
             
+
             
 <footer class="flex justify-between items-center gap-2 px-4 py-12">
 
@@ -762,20 +724,10 @@ Room 2, 3/F, Unit2, Bldg32, No.398 South Changling Road, Guanshanhu District, Gu
 
     
 
-    
-    <script>
-      
-      if(typeof IonIcons === 'undefined') {
-        const fallbackIcons = document.createElement('script');
-        fallbackIcons.src = 'https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js';
-        document.body.appendChild(fallbackIcons);
-      }
-    </script>
-    
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
     
       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
-  </body>
+</body>
 </html>
